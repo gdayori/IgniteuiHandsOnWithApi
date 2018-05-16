@@ -6,7 +6,9 @@
 
 まず、ng generate コマンドで api-server-tables という名前の Component を作成します。
 
-```sh:console
+console
+
+```sh
 $ ng generate component api-server-tables
 ```
 すると Angular CLI が App フォルダ配下に api-server-tables の Component 関連ファイル一式を生成してくれます。
@@ -23,7 +25,9 @@ $ ng generate component api-server-tables
 
 続いて、生成した Component を利用します。既に左メニューに Router に登録されているアイテムが表示され、クリックすると対応する Component を右側のコンテンツ領域へ表示する仕組みが出来ているため、ここでは app/app-routing.module.ts を開き、以下のように先程追加した Component を追加します。 
 
-```typescript:app-routing.module.ts
+app-routing.module.ts
+
+```ts
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
