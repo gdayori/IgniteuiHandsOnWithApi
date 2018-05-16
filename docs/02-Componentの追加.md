@@ -11,21 +11,18 @@ console
 ```sh
 $ ng generate component api-server-tables
 ```
+
 すると Angular CLI が App フォルダ配下に api-server-tables の Component 関連ファイル一式を生成してくれます。
 
 更に、app/app.module.ts の中で生成した Component の import ステートメントの追加およびモジュールの declarations へ追加を自動的に行なってくれます。
 
-
 ![](assets/02-01.png)
-
-
-てすと
 
 ## Component の利用
 
-続いて、生成した Component を利用します。既に左メニューに Router に登録されているアイテムが表示され、クリックすると対応する Component を右側のコンテンツ領域へ表示する仕組みが出来ているため、ここでは app/app-routing.module.ts を開き、以下のように先程追加した Component を追加します。 
+続いて、生成した Component を利用します。既に左メニューに Router に登録されているアイテムが表示され、クリックすると対応する Component を右側のコンテンツ領域へ表示する仕組みが出来ているため、ここでは app/app-routing.module.ts を開き、以下のように先程追加した Component を Routes へ追加します。 
 
-app-routing.module.ts
+app/app-routing.module.ts
 
 ```ts
 import { NgModule } from '@angular/core';
@@ -41,5 +38,33 @@ export const routes: Routes = [
   { path: 'mygrid', component: MyGridComponent, data: { text: 'myGrid' } },
   { path: 'mymonstergrid', component: MyMonsterGridComponent, data: { text: 'myMonsterGrid' } },
   { path: 'apiServerTamples', component: ApiServerTablesComponent, data: { text: 'apiServerTamples' } }
+
+  ~~~~~~
+  以下省略
+  ~~~~~~
 ];
 ```
+## 実行結果の確認
+
+ng serve コマンドでプロジェクトをビルドして、開発用のWEBサーバの起動します。
+
+console
+
+```sh
+$ ng  serve -o
+```
+
+パラメタ --open (省略：-o)  でビルド＆Webサーバへ配備後にデフォルトブラウザを自動的に立ち上げて表示してくれます。
+
+以下の実行結果のように、左メニューに apiServerTables が追加され、クリックすると右コンテンツ領域に apiServerTables のビュー定義 (app/api-server-tables.component.html)の内容が表示されます。
+
+![](assets/02-02.png)
+
+## 補足
+本ハンズオンではルーティングやナビゲーションの仕組みについては詳しく触れません。
+興味の在る方は [Angular 公式ドキュメント Routing & Navigation](https://angular.io/guide/router) を参照下さい。
+
+ [日本語版ドキュメント](https://angular.jp/guide/router) も有志により着々と日本語化が進んでおります。ありがたいです！※Routing については2018/5時点では未対応です。
+
+
+
