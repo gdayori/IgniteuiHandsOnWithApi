@@ -24,4 +24,4 @@ Ignite UI CLI を利用せずに Angular CLI を利用して一からAngularプ�
 
 ## Next
 
-[01-Angularプロジェクトの作成とIgniteUIのインポート](01-Angularプロジェクトの作成とIgniteUIのインポート.md)
+[02-Componentの追加](02-Componentの追加.md)
