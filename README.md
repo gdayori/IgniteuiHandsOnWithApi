@@ -23,8 +23,8 @@
 
 ## 目次
 0. [環境構築](docs/00-環境構築.md)
-1. [Angularプロジェクトの作成とIgniteUIのインポート](docs/01-Angularプロジェクトの作成とIgniteUIのインポート)
-2. [Componentの追加](docs/02-Componentの追加)
+1. [Angularプロジェクトの作成とIgniteUIのインポート](docs/01-Angularプロジェクトの作成とIgniteUIのインポート.md)
+2. [Componentの追加](docs/02-Componentの追加.md)
 3. [Serviceの追加と利用](docs/03-Serviceの追加と利用.md)
 4. [APIからテーブル一覧を取得](docs/04-APIからテーブル一覧を取得.md)
 5. [API からテーブルデータを取得](docs/05-APIからテーブルデータを取得.md)
