@@ -13,7 +13,11 @@ $ ng generate component api-server-tables
 
 更に、app/app.module.ts の中で生成した Component の import ステートメントの追加およびモジュールの declarations へ追加を自動的に行なってくれます。
 
+
 ![](assets/02-01.png)
+
+
+てすと
 
 ## Component の利用
 
