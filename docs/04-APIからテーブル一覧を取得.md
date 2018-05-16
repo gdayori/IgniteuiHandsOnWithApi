@@ -1,16 +1,17 @@
-# APIからデータの取得
+# API からテーブル一覧を取得
 
-ここでは、HttpClientModuleを利用して API からデータを取得し返却する関数を作成します。
+ここでは、HttpClientModuleを利用して API からデータを取得し返却する関数を作成します。また、取得したテーブル一覧をコンポーネント側で表示します。
 
 ## 目的
 - Angular の関連モジュールを利用する方法を学習する。
 - Angular の HttpClient を利用して APIからデータを取得する方法を学習します。
-- データバインド及び、ngFor 等の Directive の利用方法を学習する。
+- View における Data Binding 及び、ngFor 等の Directive の利用方法を学習する。
 
 ## 手順
-1. Compoent の生成
-2. Component の利用
-3. 実行結果の確認
+1. HttpClientModule のインポート
+2. HttpClientModule を利用してテーブル一覧を取得
+3. テーブル一覧の表示
+4. 実行結果の確認
 
 
 ## HttpClientModule のインポート
@@ -79,7 +80,7 @@ export class ApiServerService {
 ```
 HttpClient の get() メソッドは Observable 型を返すので、事前に定義しておいたテーブルのメタデータのスキーマ APITable の配列型を指定して、getTables() メソッドの返却値としています。また、.map()　の中でAPIの戻り値の value を返却するようにしていますが、これは OData が value の中に結果セットを入れているためにマッピングしているものです。
 
-## 取得結果の表示
+## テーブル一覧の表示
 
 getTables() メソッドで取得したテーブル一覧をコンポーネント側で表示してみましょう。
 
@@ -110,7 +111,6 @@ export class ApiServerTablesComponent implements OnInit {
 app\api-server-tables\api-server-tables.component.html
 
 ```html
-・・・
 <div class="main" igxLayout>
   <ul igxFlex="0 0 250px">
     <li *ngFor="let item of tableNames">
@@ -120,17 +120,14 @@ app\api-server-tables\api-server-tables.component.html
     </li>
   </ul>
 </div>
-・・・
 ```
 
 app\api-server-tables\api-server-tables.component.scss
 
-```ts
-・・・
+```css
 :host{
     width: 100%;
 }
-・・・
 ```
 
 まず、api-server-tables.component.ts の中では getTables() より返却される Observable型 を Subscribe() することで、APIから結果が帰ってきた際に非同期で結果データを受け取れるように準備しています。ここではアロー関数を利用していますが、Subscribe の第一引数で その結果データを受け取る関数を記述しています。そして、取得したデータは For 文でテーブル名の string 配列 tableNames としてクラスの中では保持します。
@@ -160,7 +157,12 @@ $ ng  serve
 
 ![](assets/04-01.png)
 
-これで、サービス経由で取得した API のテーブル一覧を ApiServerTablesComponent の中で表示されることが出来ました。
+これで、サービス経由で取得した API のテーブル一覧を ApiServerTablesComponent の中で表示されることが出来ました。次はユーザが選択したテーブルのデータ(レコード)を取得します。
 
 ## 参考
+
 [Angular 公式ドキュメント HttpClient](https://angular.io/guide/http) 
+
+## Next
+
+[05-APIからテーブルデータを取得](05-APIからテーブルデータを取得.md)

@@ -2,6 +2,16 @@
 
 ここでは、APIからデータを取得するための Service を追加し、Component からその Service を呼び出すところまで進めます。
 
+## 目的
+- Service の追加方法を学習します。
+- Service を利用する方法 (Providersへの登録 / Dipendency Injection) を学習します。
+
+## 手順
+1. Service の生成
+2. Service の登録と DI
+3. Service の利用
+4. 実行結果の確認
+
 ## Service の生成
 
 まず、ng generate コマンドで apiServer という名前の Service を作成します。
@@ -102,9 +112,10 @@ $ ng  serve
 
 ![](assets/03-02.png)
 
-これで ApiServerTablesComponent の中で ApiServerService の関数を呼び出せていることが確認できました。
+これで ApiServerTablesComponent の中で ApiServerService の関数を呼び出せていることが確認できました。次はサービスの中で実際に API からテーブルの一覧を取得します。
 
 ## 補足
 [Angular 公式ドキュメント Dependency-Injection](https://angular.io/guide/dependency-injection-pattern) 
 
-
+## Next
+[04-APIからテーブル一覧を取得](04-APIからテーブル一覧を取得.md)

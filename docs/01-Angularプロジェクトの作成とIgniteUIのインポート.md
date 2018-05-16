@@ -14,8 +14,14 @@
 
 ![](assets/01-01.png)
 
+MonsterGridを選択して、どんな事ができるのか UI を触ってみましょう。
+
 ## 補足
 
 Ignite UI CLI を利用せずに Angular CLI を利用して一からAngularプロジェクトの作成 ～ Ignite UI for Angular のインストールまで行う場合は、以下のWebページをご参考にして下さい。
 
 [Ignite UI for Angular を開始 (npm利用)](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#tab-npm)
+
+## Next
+
+[01-Angularプロジェクトの作成とIgniteUIのインポート](01-Angularプロジェクトの作成とIgniteUIのインポート.md)
