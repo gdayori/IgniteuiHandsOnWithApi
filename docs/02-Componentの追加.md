@@ -2,6 +2,15 @@
 
 ここでは、APIから取得したデータを表示するための Component を Angular CLI の ng コマンドを利用して作成します。
 
+## 目的
+- Component の追加方法を学習します。
+- Angular CLIをベースとしたアプリケーションの実行方法・確認方法を学習します。
+
+## 手順
+1. Compoent の生成
+2. Component の利用
+3. 実行結果の確認
+
 ## Compoent の生成
 
 まず、ng generate コマンドで api-server-tables という名前の Component を作成します。
@@ -11,6 +20,7 @@ console
 ```sh
 $ ng generate component api-server-tables
 ```
+    ※ "api-server-tables" または "apiServerTables" のどちらをパラメタで渡しても結果は同じとなります。ファイル名はハイフン区切りで生成され、クラス名はキャメルケースで生成されます。
 
 すると Angular CLI が App フォルダ配下に api-server-tables の Component 関連ファイル一式を生成してくれます。
 
@@ -38,11 +48,9 @@ export const routes: Routes = [
   { path: 'mygrid', component: MyGridComponent, data: { text: 'myGrid' } },
   { path: 'mymonstergrid', component: MyMonsterGridComponent, data: { text: 'myMonsterGrid' } },
   { path: 'apiServerTamples', component: ApiServerTablesComponent, data: { text: 'apiServerTamples' } }
-
-  ~~~~~~
-  以下省略
-  ~~~~~~
 ];
+
+・・・
 ```
 ## 実行結果の確認
 
@@ -60,11 +68,13 @@ $ ng  serve -o
 
 ![](assets/02-02.png)
 
+これで API Server から取得したデータを表現する Component を表示する事ができました。
+
 ## 補足
 本ハンズオンではルーティングやナビゲーションの仕組みについては詳しく触れません。
 興味の在る方は [Angular 公式ドキュメント Routing & Navigation](https://angular.io/guide/router) を参照下さい。
 
- [日本語版ドキュメント](https://angular.jp/guide/router) も有志により着々と日本語化が進んでおります。ありがたいです！※Routing については2018/5時点では未対応です。
+ [日本語版ドキュメント](https://angular.jp/guide/router) も有志により着々と日本語化が進んでおります。ありがたい！※Routing については2018/5時点では未対応です。
 
 
 
