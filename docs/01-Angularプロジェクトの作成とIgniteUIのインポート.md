@@ -1,6 +1,5 @@
 # Angular プロジェクトの作成と Ignite UI のインポート
 
-## 概要
 新規のAngularプロジェクトを作成し、更に Ignite UI for Angular のコンポーネントをプロジェクトに追加して利用できる状態にします。
 
 ## 手順

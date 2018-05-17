@@ -1,6 +1,6 @@
 # Component の新規追加
 
-ここでは、APIから取得したデータを表示するための Component を Angular CLI の ng コマンドを利用して作成します。
+ここでは、API から取得したデータを表示するためのコンポーネントを Angular CLI の ng コマンドを利用して作成します。
 
 ## 目的
 - Component の追加方法を学習します。
@@ -13,7 +13,7 @@
 
 ## Compoent の生成
 
-まず、ng generate コマンドで api-server-tables という名前の Component を作成します。
+まず、ng generate コマンドで api-server-tables という名前のコンポーネントを作成します。
 
 console
 
@@ -22,7 +22,7 @@ $ ng generate component api-server-tables
 ```
     ※ "api-server-tables" または "apiServerTables" のどちらをパラメタで渡しても結果は同じとなります。ファイル名はハイフン区切りで生成され、クラス名はキャメルケースで生成されます。
 
-すると Angular CLI が App フォルダ配下に api-server-tables の Component 関連ファイル一式を生成してくれます。
+すると Angular CLI が App フォルダ配下に api-server-tables のコンポーネント関連ファイル一式を生成してくれます。
 
 更に、app/app.module.ts の中で生成した Component の import ステートメントの追加およびモジュールの declarations へ追加を自動的に行なってくれます。
 
@@ -30,7 +30,7 @@ $ ng generate component api-server-tables
 
 ## Component の利用
 
-続いて、生成した Component を利用します。既に左メニューに Router に登録されているアイテムが表示され、クリックすると対応する Component を右側のコンテンツ領域へ表示する仕組みが出来ているため、ここでは app/app-routing.module.ts を開き、以下のように先程追加した Component を Routes へ追加します。 
+続いて、生成したコンポーネントを利用します。既に左メニューに Router に登録されているアイテムが表示され、クリックすると対応するコンポーネントを右側のコンテンツ領域へ表示する仕組みが出来ているため、ここでは app/app-routing.module.ts を開き、以下のように先程追加したコンポーネントを Routes へ登録します。 
 
 app/app-routing.module.ts
 
@@ -74,7 +74,7 @@ $ ng  serve -o
 本ハンズオンではルーティングやナビゲーションの仕組みについては詳しく触れません。
 興味の在る方は [Angular 公式ドキュメント Routing & Navigation](https://angular.io/guide/router) を参照下さい。
 
- [日本語版ドキュメント](https://angular.jp/guide/router) も有志により着々と日本語化が進んでおります。ありがたい！※Routing については2018/5時点では未対応です。
+ [日本語版ドキュメント](https://angular.jp/guide/router) も有志により日本語化が進んでおります。ありがたい！※Routing については2018/5時点では未対応です。
 
 ## Next
 [03-Serviceの追加と利用](03-Serviceの追加と利用.md)
