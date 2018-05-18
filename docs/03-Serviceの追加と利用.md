@@ -25,13 +25,11 @@ $ ng generate service api-server
 
 ![](assets/03-01.png)
 
-    ※ Angular 6 以降では @Injectable デコレータの中でサービスのスコープを指定する方式が初期状態となりますが、 Angular 5 以前では Module または Component の Provider へ個別に登録する必要があります。
-
 ## Service の登録と DI
 
 続いて、生成した Service を利用できるようにします。Angular 6 以降では @Injectable デコレータの中でサービスのスコープを指定する方式が初期状態となりますが、 Angular 5 以前では Module または Component の Provider へ個別に登録する必要があります。 
 
-今回は　Component の Provider へ作成した Service を登録します。api-server-service.ts を開いて以下のように、import ステートメントの追加とProviders へ ApiServerService を追加します。
+今回は　Component の Provider へ作成した Service を登録します。api-server-service.ts を開いて以下のように、import ステートメントの追加とProviders へ ApiServerService を追加します。<br>※ Angular 6 以降では以下のコード（Providers への登録）は必要ありません。
 
 app\api-server-tables\api-server-tables.component.ts
 
